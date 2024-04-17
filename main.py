@@ -1,6 +1,7 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.responses import JSONResponse
 from fastapi.responses import HTMLResponse
+import uvicorn
 import pandas as pd
 import numpy as np
 import scipy as sp
