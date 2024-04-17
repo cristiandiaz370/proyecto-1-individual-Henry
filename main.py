@@ -9,6 +9,7 @@ import operator
 import pyarrow as pa
 import pyarrow.parquet as pq
 from scipy.sparse import csr_matrix
+import uvicorn
 
 app = FastAPI()
 
