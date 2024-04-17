@@ -191,5 +191,5 @@ def games_recommendation(id: int):
     
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
-if __name__ == '__main__':
-    uvicorn.run('myapp:app', host='0.0.0.0', port=10000)
+# if __name__ == '__main__':
+#     uvicorn.run('myapp:app', host='0.0.0.0', port=10000)
