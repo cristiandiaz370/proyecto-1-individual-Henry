@@ -100,3 +100,6 @@ Se construyó una API mediante el uso del framework FastAPI. Esta API ofrece var
 - **GameRecommendation:** Esta función recibe como parametro el id de un juego y retorna una lista de los 5 juegos recomendados similares al ingreso.
 
 ![FastAPI](https://img.shields.io/badge/-FastAPI-333333?style=flat&logo=fastapi)
+![Render](https://img.shields.io/badge/-Render-333333?style=flat&logo=render)
+
+> Para poder interactuar con las funciones, ingrese al siguiente link: [Deploy en Render](https://proyecto-1-individual-henry-1bsg.onrender.com/)
