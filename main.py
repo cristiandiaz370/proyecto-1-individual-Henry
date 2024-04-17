@@ -5,6 +5,7 @@ import pandas as pd
 from torch import cosine_similarity
 import uvicorn
 
+
 app = FastAPI()
 
 developer_df = pd.read_parquet ('./funciones_parquet/developer.parquet')
@@ -67,7 +68,7 @@ def UserData(user_id: str):
     return {
         'user_id': user_id,
         'dinero gastado': gasto_dinero,
-        'items comprados': compra_items.astype(int),
+        'items comprados': int(compra_items),
         'Porcentaje de recomendaciones': round(recomendaciones_porcet, 3)
     }
 
@@ -94,9 +95,9 @@ def UserForGenre(genre: str):
      #creamos una lista de diccionario con la informacion de mas horas jugadas por año
     list_playtime = [{'año': int(year), 'Horas': int(hours)}for year, hours in zip(playtime_yearly['release_year'], playtime_yearly['playtime_forever'])]
     #retornamos los resultados en formato de diccionario
-    return {
-        'usuario con mas horas jugadas para genero' + genre: playtime_user_max, 'Horas jugadas':  playtime_yearly
-    }
+    print (list_playtime)
+    return {'user':  playtime_user_max, 'horas': list_playtime}
+   
 
 #endpoint /bestdeveloperyear
 @app.get("/bestdeveloperyear")
@@ -191,5 +192,4 @@ def games_recommendation(id: int):
     
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
-# if __name__ == '__main__':
-#     uvicorn.run('myapp:app', host='0.0.0.0', port=10000)
+
