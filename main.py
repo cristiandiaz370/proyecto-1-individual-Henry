@@ -1,6 +1,7 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.responses import JSONResponse
 from fastapi.responses import HTMLResponse
+<<<<<<< HEAD
 import uvicorn
 import pandas as pd
 import numpy as np
@@ -11,6 +12,11 @@ import pyarrow as pa
 import pyarrow.parquet as pq
 from scipy.sparse import csr_matrix
 
+=======
+import pandas as pd
+from torch import cosine_similarity
+import uvicorn
+>>>>>>> 05844aa756631440204b8307aaca00479bb8cf28
 
 app = FastAPI()
 
