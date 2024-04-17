@@ -2,8 +2,13 @@ from fastapi import FastAPI, HTTPException
 from fastapi.responses import JSONResponse
 from fastapi.responses import HTMLResponse
 import pandas as pd
-from torch import cosine_similarity
-import uvicorn
+import numpy as np
+import scipy as sp
+from sklearn.metrics.pairwise import cosine_similarity
+import operator
+import pyarrow as pa
+import pyarrow.parquet as pq
+from scipy.sparse import csr_matrix
 
 app = FastAPI()
 
