@@ -7,13 +7,13 @@ import uvicorn
 
 app = FastAPI()
 
-developer_df = pd.read_parquet ('C:/Users/CRISTIAN/Desktop/Proyecto final #  1/Proyecto-Final-individual-1-Henry/funciones_parquet/developer.parquet')
-users_reviews_dfb = pd.read_parquet ('C:/Users/CRISTIAN/Desktop/Proyecto final #  1/Proyecto-Final-individual-1-Henry/funciones_parquet/users_reviews.parquet')
-userdata_df = pd.read_parquet ('C:/Users/CRISTIAN/Desktop/Proyecto final #  1/Proyecto-Final-individual-1-Henry/funciones_parquet/userdata.parquet')
-userforgenre_df = pd.read_parquet ('C:/Users/CRISTIAN/Desktop/Proyecto final #  1/Proyecto-Final-individual-1-Henry/funciones_parquet/userforgenre.parquet')
-bestdeveloperyear_df = pd.read_parquet ('C:/Users/CRISTIAN/Desktop/Proyecto final #  1/Proyecto-Final-individual-1-Henry/funciones_parquet/bestdeveloperyear.parquet')
-reviews_developer_df = pd.read_parquet ('C:/Users/CRISTIAN/Desktop/Proyecto final #  1/Proyecto-Final-individual-1-Henry/funciones_parquet/DeveloperReviewsAnalysis.parquet') 
-modelo = pd.read_parquet ('C:/Users/CRISTIAN/Desktop/Proyecto final #  1/Proyecto-Final-individual-1-Henry/funciones_parquet/modelo.parquet')
+developer_df = pd.read_parquet ('./funciones_parquet/developer.parquet')
+users_reviews_dfb = pd.read_parquet ('./funciones_parquet/users_reviews.parquet')
+userdata_df = pd.read_parquet ('./funciones_parquet/userdata.parquet')
+userforgenre_df = pd.read_parquet ('./funciones_parquet/userforgenre.parquet')
+bestdeveloperyear_df = pd.read_parquet ('./funciones_parquet/bestdeveloperyear.parquet')
+reviews_developer_df = pd.read_parquet ('./funciones_parquet/DeveloperReviewsAnalysis.parquet') 
+modelo = pd.read_parquet ('./funciones_parquet/modelo.parquet')
 
 #endpoint /developer
 @app.get("/developer")
